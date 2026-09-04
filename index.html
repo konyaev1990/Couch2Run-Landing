@@ -34,9 +34,18 @@
   >
 
   <link
+    rel="preload"
+    as="style"
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap"
-    rel="stylesheet"
+    onload="this.onload=null;this.rel='stylesheet'"
   >
+
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+  </noscript>
 
   <link
     rel="stylesheet"
@@ -55,8 +64,12 @@
     (function(m,e,t,r,i,k,a){
       m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
       m[i].l=1*new Date();
-      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      function loadMetrika() {
+        for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      }
+      if (document.readyState === "complete") loadMetrika();
+      else window.addEventListener("load", loadMetrika, { once: true });
     })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=112170318", "ym");
     ym(112170318, "init", {
       ssr: true,
@@ -253,11 +266,13 @@
           <div class="goal-icon goal-icon-shoe">
 
             <img
-              src="assets/goal-shoe.png"
+              src="assets/goal-shoe.webp"
               alt=""
               aria-hidden="true"
               width="276"
               height="204"
+              loading="lazy"
+              decoding="async"
             >
 
           </div>
@@ -285,11 +300,13 @@
           <div class="goal-icon goal-icon-target">
 
             <img
-              src="assets/goal-target.png"
+              src="assets/goal-target.webp"
               alt=""
               aria-hidden="true"
               width="260"
               height="260"
+              loading="lazy"
+              decoding="async"
             >
 
           </div>
@@ -317,11 +334,13 @@
           <div class="goal-icon goal-icon-progress">
 
             <img
-              src="assets/goal-progress.png"
+              src="assets/goal-progress.webp"
               alt=""
               aria-hidden="true"
               width="224"
               height="232"
+              loading="lazy"
+              decoding="async"
             >
 
           </div>
@@ -349,11 +368,13 @@
           <div class="goal-icon goal-icon-stopwatch">
 
             <img
-              src="assets/goal-stopwatch.png"
+              src="assets/goal-stopwatch.webp"
               alt=""
               aria-hidden="true"
               width="220"
               height="220"
+              loading="lazy"
+              decoding="async"
             >
 
           </div>
