@@ -594,6 +594,19 @@ h1 span {
 }
 
 
+.format-icon--individual {
+  background: transparent;
+}
+
+
+.format-icon--individual img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+
 .format-card h3 {
   margin: 0 0 9px;
 
