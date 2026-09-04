@@ -56,6 +56,8 @@
     rel="preload"
     as="image"
     href="assets/hero-runner.webp"
+    imagesrcset="assets/hero-runner-800.webp 800w, assets/hero-runner.webp 1280w"
+    imagesizes="(max-width: 640px) 100vw, 920px"
     fetchpriority="high"
   >
 
@@ -104,14 +106,21 @@
 
       <div class="hero-visual">
 
-        <img
-          class="hero-photo"
-          src="assets/hero-runner.webp"
-          alt="Бегун на набережной на закате"
-          width="1280"
-          height="853"
-          fetchpriority="high"
-        >
+        <picture>
+          <source
+            media="(max-width: 640px)"
+            srcset="assets/hero-runner-800.webp"
+          >
+
+          <img
+            class="hero-photo"
+            src="assets/hero-runner.webp"
+            alt="Бегун на набережной на закате"
+            width="1280"
+            height="853"
+            fetchpriority="high"
+          >
+        </picture>
 
         <div class="hero-shade"></div>
 
@@ -857,6 +866,10 @@
               src="https://max.ru/s/img/big-logo.png"
               alt=""
               aria-hidden="true"
+              width="42"
+              height="42"
+              loading="lazy"
+              decoding="async"
             >
 
           </span>
