@@ -42,9 +42,36 @@
     rel="stylesheet"
     href="styles.css"
   >
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=112170318", "ym");
+    ym(112170318, "init", {
+      ssr: true,
+      webvisor: true,
+      clickmap: true,
+      ecommerce: "dataLayer",
+      referrer: document.referrer,
+      url: location.href,
+      accurateTrackBounce: true,
+      trackLinks: true
+    });
+  </script>
+  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
+
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/112170318" style="position:absolute; left:-9999px;" alt="">
+    </div>
+  </noscript>
 
   <main class="page">
 
@@ -149,6 +176,7 @@
       <a
         class="hero-button hero-button-primary"
         href="#contacts"
+        onclick="ym(112170318, 'reachGoal', 'training_signup_click'); return true;"
       >
         Записаться на тренировку
       </a>
@@ -207,6 +235,7 @@
           class="goal"
           href="#contacts"
           aria-label="Начать бегать — перейти к записи на тренировку"
+          onclick="ym(112170318, 'reachGoal', 'goal_start_running'); return true;"
         >
 
           <div class="goal-icon goal-icon-shoe">
@@ -236,6 +265,7 @@
           class="goal"
           href="#contacts"
           aria-label="Подготовиться к старту — перейти к записи на тренировку"
+          onclick="ym(112170318, 'reachGoal', 'goal_race_prep'); return true;"
         >
 
           <div class="goal-icon goal-icon-target">
@@ -265,6 +295,7 @@
           class="goal"
           href="#contacts"
           aria-label="Улучшить результат — перейти к записи на тренировку"
+          onclick="ym(112170318, 'reachGoal', 'goal_improve_result'); return true;"
         >
 
           <div class="goal-icon goal-icon-progress">
@@ -294,6 +325,7 @@
           class="goal"
           href="#contacts"
           aria-label="Вернуться к тренировкам — перейти к записи на тренировку"
+          onclick="ym(112170318, 'reachGoal', 'goal_return_training'); return true;"
         >
 
           <div class="goal-icon goal-icon-stopwatch">
@@ -319,6 +351,157 @@
 
 
       </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ФОРМАТЫ ТРЕНИРОВОК
+    ====================================== -->
+
+    <section class="formats-section" aria-labelledby="formats-title">
+
+      <div class="section-heading formats-heading">
+
+        <p class="section-label">
+          ФОРМАТЫ ТРЕНИРОВОК
+        </p>
+
+        <h2 id="formats-title">
+          Выберите удобный способ тренироваться
+        </h2>
+
+      </div>
+
+      <div class="format-cards">
+
+        <a class="format-card" href="#contacts">
+          <span class="format-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="15" r="6"></circle>
+              <path d="M12 39c1.5-7.2 5.4-11 12-11s10.5 3.8 12 11"></path>
+              <path d="M8 7h32"></path>
+            </svg>
+          </span>
+
+          <h3>Индивидуально</h3>
+          <p>Персональная работа с тренером с учётом вашей цели, уровня и графика.</p>
+          <span class="format-link">Подробнее <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="format-card" href="#contacts">
+          <span class="format-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="9" width="32" height="23" rx="3"></rect>
+              <path d="M18 40h12M24 32v8"></path>
+              <path d="M15 19h18"></path>
+            </svg>
+          </span>
+
+          <h3>Онлайн</h3>
+          <p>План тренировок, обратная связь и сопровождение, где бы вы ни находились.</p>
+          <span class="format-link">Подробнее <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="format-card" href="#contacts">
+          <span class="format-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="15" r="5"></circle>
+              <circle cx="12" cy="20" r="4"></circle>
+              <circle cx="36" cy="20" r="4"></circle>
+              <path d="M15 39c1.2-6.8 4.2-10 9-10s7.8 3.2 9 10M4 38c.6-5 3.2-8 7.4-8 2 0 3.6.5 4.8 1.7M44 38c-.6-5-3.2-8-7.4-8-2 0-3.6.5-4.8 1.7"></path>
+            </svg>
+          </span>
+
+          <h3>В группе</h3>
+          <p>Тренировки в команде, поддержка единомышленников и движение к цели вместе.</p>
+          <span class="format-link">Подробнее <span aria-hidden="true">→</span></span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         КАК СТРОИТСЯ ПОДГОТОВКА
+    ====================================== -->
+
+    <section class="process-section" aria-labelledby="process-title">
+
+      <div class="section-heading process-heading">
+
+        <p class="section-label">
+          КАК СТРОИТСЯ ПОДГОТОВКА
+        </p>
+
+        <h2 id="process-title">
+          Понятный путь к вашей цели
+        </h2>
+
+        <p>
+          Тренер ведёт вас от оценки текущего уровня до достижения результата.
+        </p>
+
+      </div>
+
+      <ol class="process-steps">
+
+        <li class="process-step">
+          <span class="process-number">1</span>
+          <span class="process-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="11" y="8" width="26" height="32" rx="3"></rect>
+              <path d="M18 8V5h12v3M18 19h12M18 26h9"></path>
+              <circle cx="34" cy="33" r="6"></circle>
+              <path d="m38 37 4 4"></path>
+            </svg>
+          </span>
+          <h3>Оценка исходного уровня</h3>
+          <p>Анализируем опыт, текущую форму, цели и доступное время.</p>
+        </li>
+
+        <li class="process-step">
+          <span class="process-number">2</span>
+          <span class="process-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="11" width="32" height="28" rx="4"></rect>
+              <path d="M8 20h32M17 7v8M31 7v8M17 27h5M27 27h4M17 33h5"></path>
+            </svg>
+          </span>
+          <h3>Планирование подготовки</h3>
+          <p>Составляем индивидуальный план с учётом вашей цели и возможностей.</p>
+        </li>
+
+        <li class="process-step">
+          <span class="process-number">3</span>
+          <span class="process-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 31c8 0 13-1 18-7l6-8 7 3-6 8c-5 7-13 11-25 11"></path>
+              <path d="M20 19c4 2 8 3 13 3M10 35h9M35 35h8"></path>
+            </svg>
+          </span>
+          <h3>Контроль и поддержка</h3>
+          <p>Отслеживаем нагрузку, даём обратную связь и корректируем план.</p>
+        </li>
+
+        <li class="process-step">
+          <span class="process-number">4</span>
+          <span class="process-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M38 18a15 15 0 0 0-25-5"></path>
+              <path d="M10 9v7h7"></path>
+              <path d="M10 30a15 15 0 0 0 25 5"></path>
+              <path d="M38 39v-7h-7"></path>
+            </svg>
+          </span>
+          <h3>Корректировка программы</h3>
+          <p>Адаптируем план по мере прогресса, самочувствия и изменений в жизни.</p>
+        </li>
+
+      </ol>
 
     </section>
 
@@ -551,9 +734,10 @@
 
         <a
           class="social-button"
-          href="https://t.me/konyaev_ivan?text=Здравствуйте%2C%20хочу%20записаться%20на%20тренировку"
-          target="_blank"
-          rel="noopener noreferrer"
+        href="https://t.me/konyaev_ivan?text=Здравствуйте%2C%20хочу%20записаться%20на%20тренировку"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="ym(112170318, 'reachGoal', 'telegram_click'); return true;"
         >
 
           <span class="social-icon social-icon-telegram">
@@ -593,9 +777,10 @@
 
         <a
           class="social-button"
-          href="https://wa.me/79169788281?text=Здравствуйте%2C%20хочу%20записаться%20на%20тренировку"
-          target="_blank"
-          rel="noopener noreferrer"
+        href="https://wa.me/79169788281?text=Здравствуйте%2C%20хочу%20записаться%20на%20тренировку"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="ym(112170318, 'reachGoal', 'whatsapp_click'); return true;"
         >
 
           <span class="social-icon social-icon-whatsapp">
@@ -635,9 +820,10 @@
 
         <a
           class="social-button"
-          href="https://max.ru/u/f9LHodD0cOIkm1JYVkV5uDOb16O6CQuoD32pa4gosnK4BfQa-so4rtoXTDk"
-          target="_blank"
-          rel="noopener noreferrer"
+        href="https://max.ru/u/f9LHodD0cOIkm1JYVkV5uDOb16O6CQuoD32pa4gosnK4BfQa-so4rtoXTDk"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="ym(112170318, 'reachGoal', 'max_click'); return true;"
         >
 
           <span class="social-icon social-icon-max">
@@ -699,6 +885,21 @@
 
 
   </main>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      var contacts = document.getElementById("contacts");
+      if (!contacts || !window.IntersectionObserver) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting) return;
+        ym(112170318, "reachGoal", "contacts_view");
+        observer.disconnect();
+      }, { threshold: 0.5 });
+
+      observer.observe(contacts);
+    });
+  </script>
 
 </body>
 

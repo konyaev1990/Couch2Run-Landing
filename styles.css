@@ -508,6 +508,282 @@ h1 span {
 }
 
 
+/* =========================================
+   TRAINING FORMATS
+========================================= */
+
+.formats-section {
+  padding-top: 46px;
+}
+
+
+.formats-heading {
+  text-align: center;
+}
+
+
+.format-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+.format-card {
+  display: flex;
+
+  min-height: 250px;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 30px 24px 25px;
+
+  border: 1px solid #dce6ef;
+
+  border-radius: 18px;
+
+  background: var(--white);
+
+  color: inherit;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 24px rgba(7, 26, 59, 0.035);
+
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+
+.format-card:hover,
+.format-card:focus-visible {
+  border-color: rgba(19, 127, 240, 0.45);
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 14px 30px rgba(7, 26, 59, 0.09);
+}
+
+
+.format-icon {
+  display: grid;
+
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 16px;
+
+  place-items: center;
+
+  border-radius: 16px;
+
+  background: #eef7ff;
+
+  color: var(--blue);
+}
+
+
+.format-icon svg {
+  width: 31px;
+  height: 31px;
+}
+
+
+.format-card h3 {
+  margin: 0 0 9px;
+
+  color: var(--navy);
+
+  font-size: 1.05rem;
+
+  font-weight: 800;
+}
+
+
+.format-card p {
+  margin: 0;
+
+  color: #5c6d7f;
+
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+}
+
+
+.format-link {
+  margin-top: auto;
+
+  padding-top: 18px;
+
+  color: var(--blue);
+
+  font-size: 0.82rem;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   TRAINING PROCESS
+========================================= */
+
+.process-section {
+  padding-top: 46px;
+}
+
+
+.process-heading {
+  text-align: center;
+}
+
+
+.process-heading > p:last-child {
+  max-width: 620px;
+
+  margin: 7px auto 0;
+
+  color: #5c6d7f;
+
+  font-size: 0.92rem;
+
+  line-height: 1.5;
+}
+
+
+.process-steps {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.process-step {
+  position: relative;
+
+  min-height: 258px;
+
+  padding: 102px 22px 24px;
+
+  border: 1px solid #dce6ef;
+
+  border-radius: 18px;
+
+  background: var(--white);
+
+  box-shadow: 0 8px 24px rgba(7, 26, 59, 0.035);
+}
+
+
+.process-step:not(:last-child)::after {
+  content: "→";
+
+  position: absolute;
+
+  top: 50%;
+  right: -30px;
+
+  z-index: 2;
+
+  width: 28px;
+
+  color: var(--blue);
+
+  font-size: 1.35rem;
+
+  font-weight: 800;
+
+  text-align: center;
+
+  transform: translateY(-50%);
+}
+
+
+.process-number {
+  display: grid;
+
+  position: absolute;
+
+  top: 13px;
+  left: 13px;
+
+  width: 27px;
+  height: 27px;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--blue);
+
+  color: var(--white);
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+}
+
+
+.process-icon {
+  display: grid;
+
+  position: absolute;
+
+  top: 15px;
+  left: 61px;
+
+  width: 54px;
+  height: 54px;
+
+  place-items: center;
+
+  color: var(--blue);
+}
+
+
+.process-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+
+.process-step h3 {
+  margin: 0 0 9px;
+
+  color: var(--navy);
+
+  font-size: 0.98rem;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+.process-step p {
+  margin: 0;
+
+  color: #5c6d7f;
+
+  font-size: 0.85rem;
+
+  line-height: 1.48;
+}
+
+
 .goals {
   position: relative;
 
@@ -1749,6 +2025,137 @@ footer strong {
   .goal-icon-stopwatch img {
     width: 37px;
     max-height: 37px;
+  }
+
+
+  /* TRAINING FORMATS */
+
+  .formats-section {
+    padding-top: 36px;
+  }
+
+
+  .format-cards {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .format-card {
+    min-height: 0;
+
+    align-items: flex-start;
+
+    padding: 20px;
+
+    text-align: left;
+  }
+
+
+  .format-icon {
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 12px;
+
+    border-radius: 13px;
+  }
+
+
+  .format-icon svg {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  .format-card h3 {
+    font-size: 1rem;
+  }
+
+
+  .format-card p {
+    font-size: 0.86rem;
+  }
+
+
+  .format-link {
+    margin-top: 13px;
+
+    padding-top: 0;
+  }
+
+
+  /* TRAINING PROCESS */
+
+  .process-section {
+    padding-top: 36px;
+  }
+
+
+  .process-heading > p:last-child {
+    font-size: 0.86rem;
+  }
+
+
+  .process-steps {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .process-step {
+    min-height: 0;
+
+    padding: 20px 20px 20px 78px;
+  }
+
+
+  .process-step:not(:last-child)::after {
+    content: "↓";
+
+    top: auto;
+    right: auto;
+    bottom: -23px;
+    left: 27px;
+
+    transform: none;
+  }
+
+
+  .process-number {
+    top: 18px;
+    left: 20px;
+  }
+
+
+  .process-icon {
+    position: absolute;
+
+    top: 47px;
+    left: 12px;
+
+    width: 44px;
+    height: 44px;
+
+    margin: 0;
+  }
+
+
+  .process-icon svg {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .process-step h3 {
+    font-size: 0.96rem;
+  }
+
+
+  .process-step p {
+    font-size: 0.84rem;
   }
 
 
