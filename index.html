@@ -55,9 +55,16 @@
   <link
     rel="preload"
     as="image"
+    href="assets/hero-runner-520.webp"
+    media="(max-width: 640px)"
+    fetchpriority="high"
+  >
+
+  <link
+    rel="preload"
+    as="image"
     href="assets/hero-runner.webp"
-    imagesrcset="assets/hero-runner-800.webp 800w, assets/hero-runner.webp 1280w"
-    imagesizes="(max-width: 640px) 100vw, 920px"
+    media="(min-width: 641px)"
     fetchpriority="high"
   >
 
@@ -109,7 +116,7 @@
         <picture>
           <source
             media="(max-width: 640px)"
-            srcset="assets/hero-runner-800.webp"
+            srcset="assets/hero-runner-520.webp"
           >
 
           <img
