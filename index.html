@@ -43,6 +43,13 @@
     href="styles.css"
   >
 
+  <link
+    rel="preload"
+    as="image"
+    href="assets/hero-runner.webp"
+    fetchpriority="high"
+  >
+
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -86,8 +93,11 @@
 
         <img
           class="hero-photo"
-          src="assets/hero-runner.png"
+          src="assets/hero-runner.webp"
           alt="Бегун на набережной на закате"
+          width="1280"
+          height="853"
+          fetchpriority="high"
         >
 
         <div class="hero-shade"></div>
@@ -99,8 +109,10 @@
 
             <img
               class="logo"
-              src="assets/c2r-logo.png"
+              src="assets/c2r-logo.webp"
               alt="Couch2Run"
+              width="256"
+              height="256"
             >
 
             <div class="brand-name">
@@ -244,6 +256,8 @@
               src="assets/goal-shoe.png"
               alt=""
               aria-hidden="true"
+              width="276"
+              height="204"
             >
 
           </div>
@@ -274,6 +288,8 @@
               src="assets/goal-target.png"
               alt=""
               aria-hidden="true"
+              width="260"
+              height="260"
             >
 
           </div>
@@ -304,6 +320,8 @@
               src="assets/goal-progress.png"
               alt=""
               aria-hidden="true"
+              width="224"
+              height="232"
             >
 
           </div>
@@ -334,6 +352,8 @@
               src="assets/goal-stopwatch.png"
               alt=""
               aria-hidden="true"
+              width="220"
+              height="220"
             >
 
           </div>
@@ -516,8 +536,12 @@
 
               <img
                 class="coach-photo"
-                src="assets/coach-photo.png"
+                src="assets/coach-photo.webp"
                 alt="Иван Коняев — тренер по бегу"
+                width="900"
+                height="900"
+                loading="lazy"
+                decoding="async"
               >
 
             </div>
