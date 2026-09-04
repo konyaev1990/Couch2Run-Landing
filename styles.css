@@ -767,7 +767,8 @@ h1 span {
 }
 
 
-.process-icon svg {
+.process-icon svg,
+.process-icon img {
   width: 48px;
   height: 48px;
 }
@@ -2156,7 +2157,8 @@ footer strong {
   }
 
 
-  .process-icon svg {
+  .process-icon svg,
+  .process-icon img {
     width: 38px;
     height: 38px;
   }
