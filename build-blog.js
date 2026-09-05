@@ -58,7 +58,7 @@ function layout({ title, description, content, depth, noindex = false }) {
 }
 
 fs.mkdirSync(blogDir, { recursive: true });
-const articles = fs.readdirSync(articlesDir).filter((file) => file.endsWith(".md") && file !== "README.md").map(parseArticle).sort((a, b) => b.date.localeCompare(a.date));
+const articles = fs.readdirSync(articlesDir).filter((file) => file.endsWith(".md") && file !== "README.md").map(parseArticle).filter((article) => article.published !== "false").sort((a, b) => b.date.localeCompare(a.date));
 for (const article of articles) {
   const articleDir = path.join(blogDir, article.slug);
   fs.mkdirSync(articleDir, { recursive: true });
